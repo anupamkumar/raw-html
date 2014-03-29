@@ -12,32 +12,32 @@ Although you could probably do it quick and dirty using regular expressions as w
 
 ####Eg:
 ...java
->import org.htmlparser.Parser;
->import org.htmlparser.filters.TagNameFilter;
->import org.htmlparser.util.NodeList;
->import org.htmlparser.Node;
->import org.htmlparser.util.ParserException;
+import org.htmlparser.Parser;
+import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.Node;
+import org.htmlparser.util.ParserException;
 ...
 . . .
 ...java
->    //parse html and extract all <p> tags from html and return them as string
->	 public String parseHTMLParser(String HTML) throws ParserException
->    {
->        System.out.println("*** HTMLPARSER ***");
->        Parser parser = new Parser(HTML);
->        NodeList nl = parser.parse(null);
->        NodeList p = nl.extractAllNodesThatMatch(new TagNameFilter("p"), true);
->        String s = printHtmlParserTagContents(p);
->        return s;        
->    }
->     private String printHtmlParserTagContents(NodeList nodes) {
->        StringBuilder sb = new StringBuilder();
->         for(int i=0;i<nodes.size();i++) {
->            final Node node = nodes.elementAt(i);
->            sb.append("<"+node.getText()+">"+ node.getChildren().asString()+"</"+node.getText()+">");
->        }
->         return sb.toString();
->    }
+    //parse html and extract all <p> tags from html and return them as string
+	 public String parseHTMLParser(String HTML) throws ParserException
+    {
+        System.out.println("*** HTMLPARSER ***");
+        Parser parser = new Parser(HTML);
+        NodeList nl = parser.parse(null);
+        NodeList p = nl.extractAllNodesThatMatch(new TagNameFilter("p"), true);
+        String s = printHtmlParserTagContents(p);
+        return s;        
+    }
+     private String printHtmlParserTagContents(NodeList nodes) {
+        StringBuilder sb = new StringBuilder();
+         for(int i=0;i<nodes.size();i++) {
+            final Node node = nodes.elementAt(i);
+            sb.append("<"+node.getText()+">"+ node.getChildren().asString()+"</"+node.getText()+">");
+        }
+         return sb.toString();
+    }
 ... 
 
 Use the function as follows: In **ParseResult filter()** function call the function **String parseHTMLParser()**
