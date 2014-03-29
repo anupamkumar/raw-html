@@ -12,7 +12,7 @@ Although you could probably do it quick and dirty using regular expressions as w
 
 ####Eg:
 
-Parse html and extract all``` <p> ```tags from html and return them as string to be stored in rawcontent.
+Parse html and extract all``` <p> ```tags from html and return them as string to be stored in **rawcontent** field in nutch schema.
 ```java
 import org.htmlparser.Parser;
 import org.htmlparser.filters.TagNameFilter;
