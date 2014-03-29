@@ -1,7 +1,6 @@
 # Compiled version
 ## Use this plugin if you want to store raw, unstripped html in your nutch-crawl. Default nutch settings strips HTML tags by default. 
-
-### Use this if you don't want to build the plugin from source yourself and want to use the plugin, as-is.
+Use this if you don't want to build the plugin from source yourself and want to use the plugin, as-is.
 ## How to :: Steps to add plugin it in your nutch deployment
 - download raw-html from github
 - copy the raw-html folder to your *$NUTCH_HOME/plugin folder*
