@@ -1,4 +1,4 @@
-raw-html
+raw-html -- Apache Nutch plugin
 ========
 
 Apache Nutch Plugin to capture Raw, Unstripped HTML content that nutch crawls
