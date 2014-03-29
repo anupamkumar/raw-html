@@ -47,7 +47,8 @@ str = parseHTMLParser(str);
 ```
 And now you're ready to build it.
 
- ###How to build after modification 
+###How to build after modification 
+ 
  - add any external libraries used into the build system by placing them in *$APACHE_NUTCH_SRC/lib/*
  - go into the plugins/raw-html folder and run the command - ```ant```
  - ```cd .. ```
