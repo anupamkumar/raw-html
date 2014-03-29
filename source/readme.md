@@ -11,13 +11,15 @@ The ideal way to make changes would be to write a function that takes in the the
 Although you could probably do it quick and dirty using regular expressions as well.
 
 ####Eg:
-...
+```java
 import org.htmlparser.Parser;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.Node;
 import org.htmlparser.util.ParserException;
-
+```
+...
+```java
 //parse html and extract all <p> tags from html and return them as string
 public String parseHTMLParser(String HTML) throws ParserException
 {
@@ -36,13 +38,13 @@ private String printHtmlParserTagContents(NodeList nodes) {
     }
     return sb.toString();
 }
-... 
+```
 
 Use the function as follows: In **ParseResult filter()** function call the function **String parseHTMLParser()**
-...
+```java
 String str = new String(rawContent, "UTF-8");
 str = parseHTMLParser(str);
-...
+```
 And now you're ready to build it.
 
  ### How to build after modification 
