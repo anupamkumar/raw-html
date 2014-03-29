@@ -3,7 +3,7 @@
 ###To do modification you need the following prerequisites
 - Download apache-nutch source - http://nutch.apache.org/downloads.html
 - Download and install apache-ant build system - https://ant.apache.org/bindownload.cgi
-- Download raw-html source code folder and put it in *$APACHE_NUTCH_SRC/src/plugins/* folder
+- Download (preferably clone, **more preferable -fork**) raw-html source code folder and put it in *$APACHE_NUTCH_SRC/src/plugins/* folder
 - You would want to make changes to changes to the NoTrimHTMLParseFilter.java file and add capabilities there
 
 The ideal way to make changes would be to write a function that takes in the the HTMLString stored in **str** variable  and creates a **Node object** provided by a HTML parser like [HTMLParser](http://htmlparser.sourceforge.net/) or something similar using other Parsers like [tagsoup or Xerces](http://htmlparsing.com/java.html).
