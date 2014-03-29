@@ -11,6 +11,8 @@ The ideal way to make changes would be to write a function that takes in the the
 Although you could probably do it quick and dirty using regular expressions as well.
 
 ####Eg:
+
+Parse html and extract all <p> tags from html and return them as string to be stored in rawcontent.
 ```java
 import org.htmlparser.Parser;
 import org.htmlparser.filters.TagNameFilter;
